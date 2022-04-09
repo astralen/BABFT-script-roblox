@@ -1,0 +1,125 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("BABFT", "DarkTheme")
+
+local Tab = Window:NewTab("Helper")
+
+local HelperSection = Tab:NewSection("Speed")
+
+HelperSection:NewSlider("Speed", "Speed", 100, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+local HelperSection = Tab:NewSection("JumpPower")
+
+HelperSection:NewSlider("JumpPower", "JumpPower", 200, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local HelperSection = Tab:NewSection("Inf Jumps")
+
+HelperSection:NewButton("Inf Jumps", "hi", function()
+    local InfiniteJumpEnabled = true
+    game:GetService("UserInputService").JumpRequest:connect(function()
+            if InfiniteJumpEnabled then
+                    game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+            end
+end)
+end)
+
+local Tab = Window:NewTab("Teleports")
+
+local TeleportsSection = Tab:NewSection("Teams")
+
+TeleportsSection:NewButton("Blue", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(373.9690246582031, -9.700002670288086, 300.207275390625)
+end)
+
+TeleportsSection:NewButton("Red", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(373.6181945800781, -9.700003623962402, -64.78864288330078)
+end)
+
+TeleportsSection:NewButton("Yellow", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-480.9814147949219, -9.700005531311035, 640.4423217773438)
+end)
+
+TeleportsSection:NewButton("Purple", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(373.2250671386719, -9.700003623962402, 647.1405639648438)
+end)
+
+TeleportsSection:NewButton("Black", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-480.0040283203125, -9.700005531311035, -69.51323699951172)
+end)
+
+TeleportsSection:NewButton("White", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-49.87824249267578, -9.700003623962402, -497.41937255859375)
+end)
+
+local TeleportsSection = Tab:NewSection("Etaps")
+
+TeleportsSection:NewButton("1", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-48.73576354980469, 67.89002227783203, 1705.695556640625)
+end)
+
+TeleportsSection:NewButton("2", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-44.85211944580078, 80.17113494873047, 2463.638671875)
+end)
+
+TeleportsSection:NewButton("3", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-58.94911575317383, 81.25352478027344, 3241.520751953125)
+end)
+
+TeleportsSection:NewButton("4", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-53.63425827026367, 79.09906005859375, 3942.363037109375)
+end)
+
+TeleportsSection:NewButton("5", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-48.328704833984375, 80.19955444335938, 4823.64599609375)
+end)
+
+TeleportsSection:NewButton("6", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.88420867919922, 111.36405181884766, 5574.58642578125)
+end)
+
+TeleportsSection:NewButton("7", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-46.84341049194336, 98.74480438232422, 6258.2939453125)
+end)
+
+TeleportsSection:NewButton("8", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-58.59678268432617, 94.4964370727539, 7151.615234375)
+end)
+
+TeleportsSection:NewButton("9", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55.88348388671875, 111.15419006347656, 7881.66943359375)
+end)
+
+TeleportsSection:NewButton("10", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55.73786163330078, -122.34368133544922, 8768.279296875)
+end)
+
+local TeleportsSection = Tab:NewSection("Chest")
+
+TeleportsSection:NewButton("Chest", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-54.995487213134766, -360.40423583984375, 9470.1240234375)
+end)
+
+local TeleportsSection = Tab:NewSection("Secret Room")
+
+TeleportsSection:NewButton("Secret Room Teleport", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(207.71434020996094, -11.4000883102417, 1160.6177978515625)
+end)
+
+TeleportsSection:NewButton("Save Secret Room Position 1", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(273.33807373046875, 5.69991397857666, 1182.07861328125)
+end)
+
+TeleportsSection:NewButton("Save Secret Room Position 2", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(253.64749145507812, 24.49991226196289, 1160.5277099609375)
+end)
+
+TeleportsSection:NewButton("Secret Skeleten Duck Trophie", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-31.638996124267578, -536.8497924804688, 2576.982421875)
+end)
+
+TeleportsSection:NewButton("Secret Clock Room", "(info here rlly)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-31.638996124267578, -536.8497924804688, 2576.982421875)
+end)
